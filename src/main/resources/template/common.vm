@@ -1,0 +1,62 @@
+##（通用配置、宏定义等）
+
+#set($tableName = $!{tableInfo.tableName})
+#set($tableComment = $!{tableInfo.tableComment})
+
+#set($baseMapperPackage = $!{tableInfo.mapperPackage})
+#set($baseDaoPackage = $!{tableInfo.daoPackage})
+#set($baseDaoImplPackage = $!{tableInfo.daoImplPackage})
+
+#set($entityPackage = $!{tableInfo.entityPackage})
+#set($mapperPackage = $!{tableInfo.mapperPackage})
+#set($daoPackage = $!{tableInfo.daoPackage})
+#set($daoImplPackage = $!{tableInfo.daoImplPackage})
+
+#set($entityName = $!{tableInfo.entityName})
+#set($mapperName = $!{tableInfo.mapperName})
+#set($daoName = $!{tableInfo.daoName})
+#set($daoImplName = $!{tableInfo.daoImplName})
+
+#set($mapperNameSuffix = $!{tableSaveInfo.mapperNameSuffix})
+#set($daoNameSuffix = $!{tableSaveInfo.daoNameSuffix})
+#set($daoImplNameSuffix = $!{tableSaveInfo.daoImplNameSuffix})
+
+#set($baseMapperName = 'Base' + "$!{mapperNameSuffix}")
+#set($baseDaoName = 'Base' + $!{daoNameSuffix})
+#set($baseDaoImplName = 'Base' + $!{daoImplNameSuffix})
+
+#set($servicePackage = $!{tableInfo.servicePackage})
+#set($controllerPackage = $!{tableInfo.controllerPackage})
+
+#set($serviceName = $!{tableInfo.serviceName})
+#set($controllerName = $!{tableInfo.controllerName})
+
+#macro(autoImport $importList)
+#foreach($import in $importList)
+import $!import;
+#end
+#end
+
+## 定义类注释的宏定义
+#macro(classComment $desc)
+/**
+ * $!{desc}
+ * @author $!{USER}
+ * @since $!{DATE}
+ */
+#end
+
+## 定义类注释的宏定义
+#macro(entityField $column)
+
+#if(${column.comment})
+    /**
+     * ${column.comment}
+     */
+#end##
+#if($column.isPk())
+    @Id
+#end
+    @Column(name = "${column.name}")
+    private ${column.typeShortName} $column.fieldName;
+#end##

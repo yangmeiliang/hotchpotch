@@ -1,0 +1,74 @@
+<idea-plugin require-restart="false">
+    <id>org.yml.plugin.hotchpotch</id>
+    <name>Hotchpotch</name>
+    <vendor email="" url="">Hotchpotch</vendor>
+
+    <description><![CDATA[
+    <p>1.GenerateO2O</p>
+    <p>2.ConvertToJson</p>
+    <p>3.UploadToApiMocker</p>
+    <p>4.CodeGenerateFromCreateSql</p>
+    ]]></description>
+
+    <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.java</depends>
+    <depends>com.intellij.velocity</depends>
+
+    <resource-bundle>messages.HotchpotchBundle</resource-bundle>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+
+        <applicationService serviceImplementation="org.yml.plugin.config.ApiMockerSettings"/>
+
+        <projectService serviceImplementation="org.yml.plugin.config.CodeGeneratorSettings"/>
+        <!--系统设置面板-->
+        <projectConfigurable groupId="tools"
+                             bundle="messages.HotchpotchBundle"
+                             instance="org.yml.plugin.ui.MainSettings"
+                             id="Hotchpotch.Settings">
+            <configurable instance="org.yml.plugin.ui.ApiMockerSettingConfigurable" id="ApiMockerSetting" key="configurable.hotchpotch.api-mocker" bundle="messages.HotchpotchBundle"/>
+            <configurable instance="org.yml.plugin.ui.TemplatesSettingConfigurable" id="TemplatesSetting" key="configurable.hotchpotch.templates" bundle="messages.HotchpotchBundle"/>
+        </projectConfigurable>
+    </extensions>
+
+    <actions>
+        <action id="org.yml.plugin.actions.RestartAction"
+                class="org.yml.plugin.actions.RestartAction"/>
+        <!-- Add your actions here -->
+        <action id="org.yml.plugin.actions.GenerateO2OAction"
+                class="org.yml.plugin.actions.GenerateO2OAction"
+                description="ConvertOneObjectToAnotherObject">
+            <add-to-group group-id="EditorLangPopupMenu" anchor="last"/>
+            <add-to-group group-id="GenerateGroup" anchor="last"/>
+        </action>
+        <action id="org.yml.plugin.actions.ConvertToJsonAction"
+                class="org.yml.plugin.actions.ConvertToJsonAction"
+                description="ConvertJavaBeanToJson">
+            <add-to-group group-id="EditorLangPopupMenu" anchor="last"/>
+            <add-to-group group-id="GenerateGroup" anchor="last"/>
+        </action>
+        <action id="org.yml.plugin.actions.UploadToApiMockerAction"
+                class="org.yml.plugin.actions.UploadToApiMockerAction"
+                description="UploadToApiMocker">
+            <add-to-group group-id="EditorLangPopupMenu" anchor="last"/>
+            <add-to-group group-id="GenerateGroup" anchor="last"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="alt o"/>
+        </action>
+        <action id="org.yml.plugin.actions.GenerateEntityAndDaoAction"
+                class="org.yml.plugin.actions.GenerateEntityAndDaoAction"
+                description="GenerateEntityAndDao">
+            <add-to-group group-id="EditorLangPopupMenu" anchor="last"/>
+            <add-to-group group-id="GenerateGroup" anchor="last"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="alt g"/>
+        </action>
+    </actions>
+    <applicationListeners>
+        <listener class="org.yml.plugin.listener.AppActivationListener"
+                  topic="com.intellij.openapi.application.ApplicationActivationListener"/>
+        <listener class="org.yml.plugin.listener.MyProjectManagerListener"
+                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
+    </applicationListeners>
+    <idea-version since-build="201"/>
+</idea-plugin>

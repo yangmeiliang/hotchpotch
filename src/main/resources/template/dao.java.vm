@@ -1,0 +1,13 @@
+## 引入宏定义
+#parse("common.vm")
+
+package ${daoPackage};
+
+import ${baseDaoPackage}.${baseDaoName};
+import ${entityPackage}.${entityName};
+
+## 使用宏定义实现类注释信息
+#classComment($!{tableComment})
+public interface ${daoName} extends ${baseDaoName}<${entityName}> {
+
+}

@@ -1,0 +1,50 @@
+## 引入宏定义
+#parse("common.vm")
+package ${servicePackage};
+
+import cn.dxy.bbs.ms.BaseTest;
+import cn.dxy.bbs.ms.model.PageBean;
+import org.junit.Test;
+
+import javax.annotation.Resource;
+import java.util.List;
+
+#classComment("")
+public class ${serviceName}Test extends BaseTest {
+
+    @Resource
+    private ${serviceName} service;
+
+    @Test
+    public void page() {
+        PageBean<?> page = service.page(null);
+        // TODO
+    }
+
+    @Test
+    public void list() {
+        List<?> list = service.list(null);
+        // TODO
+    }
+
+    @Test
+    public void detail() {
+        Object detail = service.detail(1);
+        // TODO
+    }
+
+    @Test
+    public void insert() {
+
+    }
+
+    @Test
+    public void update() {
+
+    }
+
+    @Test
+    public void delete() {
+
+    }
+}

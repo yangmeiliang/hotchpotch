@@ -1,0 +1,807 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="org.yml.plugin.ui.CodeGeneratorDialog">
+  <grid id="27dc6" binding="mainPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+    <constraints>
+      <xy x="6" y="6" width="1200" height="700"/>
+    </constraints>
+    <properties>
+      <autoscrolls value="true"/>
+      <foreground color="-4473925"/>
+      <inheritsPopupMenu value="true"/>
+      <maximumSize width="2147483647" height="2147483647"/>
+      <minimumSize width="1200" height="550"/>
+      <opaque value="true"/>
+      <preferredSize width="1200" height="550"/>
+    </properties>
+    <clientProperties>
+      <html.disable class="java.lang.Boolean" value="false"/>
+    </clientProperties>
+    <border type="none"/>
+    <children>
+      <grid id="a173" layout-manager="GridBagLayout">
+        <constraints border-constraint="Center"/>
+        <properties>
+          <alignmentX value="0.0"/>
+          <alignmentY value="0.0"/>
+          <focusable value="false"/>
+          <maximumSize width="-1" height="-1"/>
+          <minimumSize width="-1" height="-1"/>
+          <preferredSize width="-1" height="-1"/>
+        </properties>
+        <border type="none" title=""/>
+        <children>
+          <grid id="fb111" layout-manager="GridLayoutManager" row-count="1" column-count="10" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="20" bottom="0" right="20"/>
+            <constraints>
+              <grid row="15" column="0" row-span="1" col-span="4" vsize-policy="3" hsize-policy="3" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="1.0"/>
+            </constraints>
+            <properties>
+              <alignmentX value="0.0"/>
+              <alignmentY value="0.0"/>
+              <autoscrolls value="true"/>
+              <minimumSize width="738" height="50"/>
+              <preferredSize width="765" height="50"/>
+            </properties>
+            <clientProperties>
+              <html.disable class="java.lang.Boolean" value="false"/>
+            </clientProperties>
+            <border type="etched" title=""/>
+            <children>
+              <component id="d9300" class="javax.swing.JButton" binding="runButton" default-binding="true">
+                <constraints>
+                  <grid row="0" column="8" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="run"/>
+                </properties>
+              </component>
+              <component id="4877b" class="javax.swing.JButton" binding="cancelButton" default-binding="true">
+                <constraints>
+                  <grid row="0" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <alignmentX value="0.0"/>
+                  <text value="cancel"/>
+                </properties>
+              </component>
+              <hspacer id="34c39">
+                <constraints>
+                  <grid row="0" column="7" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </hspacer>
+              <component id="a860e" class="javax.swing.JCheckBox" binding="entityCheckBox" default-binding="true">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <selected value="true"/>
+                  <text value="entity"/>
+                </properties>
+              </component>
+              <component id="a249a" class="javax.swing.JCheckBox" binding="daoCheckBox">
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <selected value="true"/>
+                  <text value="dao"/>
+                </properties>
+              </component>
+              <component id="cfdaf" class="javax.swing.JCheckBox" binding="mapperCheckBox">
+                <constraints>
+                  <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <selected value="true"/>
+                  <text value="mapper"/>
+                </properties>
+              </component>
+              <component id="a8e62" class="javax.swing.JCheckBox" binding="daoImplCheckBox">
+                <constraints>
+                  <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <selected value="true"/>
+                  <text value="daoImpl"/>
+                </properties>
+              </component>
+              <component id="ea09e" class="javax.swing.JCheckBox" binding="serviceCheckBox">
+                <constraints>
+                  <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <selected value="true"/>
+                  <text value="service"/>
+                </properties>
+              </component>
+              <component id="28017" class="javax.swing.JCheckBox" binding="controllerCheckBox">
+                <constraints>
+                  <grid row="0" column="5" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <selected value="true"/>
+                  <text value="controller"/>
+                </properties>
+              </component>
+              <component id="d33ea" class="javax.swing.JCheckBox" binding="serviceTestCheckBox">
+                <constraints>
+                  <grid row="0" column="6" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <selected value="true"/>
+                  <text value="service test"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <component id="32afb" class="javax.swing.JTextField" binding="entityPathTextField">
+            <constraints>
+              <grid row="7" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <gridbag top="0" left="0" bottom="0" right="20" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <alignmentX value="0.0"/>
+              <alignmentY value="0.0"/>
+              <autoscrolls value="true"/>
+              <editable value="false"/>
+              <enabled value="true"/>
+              <maximumSize width="-1" height="-1"/>
+              <minimumSize width="-1" height="30"/>
+              <opaque value="false"/>
+              <preferredSize width="-1" height="30"/>
+              <requestFocusEnabled value="true"/>
+              <verifyInputWhenFocusTarget value="true"/>
+            </properties>
+          </component>
+          <component id="2ff18" class="javax.swing.JTextField" binding="entityNameTextField">
+            <constraints>
+              <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <alignmentX value="0.0"/>
+              <alignmentY value="0.0"/>
+              <autoscrolls value="true"/>
+              <editable value="true"/>
+              <enabled value="true"/>
+              <focusable value="true"/>
+              <margin top="2" left="6" bottom="2" right="6"/>
+              <maximumSize width="-1" height="-1"/>
+              <minimumSize width="150" height="30"/>
+              <opaque value="true"/>
+              <preferredSize width="200" height="30"/>
+              <requestFocusEnabled value="true"/>
+              <text value=""/>
+              <verifyInputWhenFocusTarget value="true"/>
+            </properties>
+          </component>
+          <component id="293c3" class="javax.swing.JTextField" binding="mapperNameTextField">
+            <constraints>
+              <grid row="8" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <alignmentX value="0.0"/>
+              <alignmentY value="0.0"/>
+              <autoscrolls value="true"/>
+              <editable value="false"/>
+              <maximumSize width="-1" height="-1"/>
+              <minimumSize width="-1" height="30"/>
+              <opaque value="false"/>
+              <preferredSize width="150" height="30"/>
+              <requestFocusEnabled value="true"/>
+              <verifyInputWhenFocusTarget value="true"/>
+            </properties>
+          </component>
+          <component id="35c1f" class="javax.swing.JTextField" binding="mapperPathTextField">
+            <constraints>
+              <grid row="8" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <gridbag top="0" left="0" bottom="0" right="20" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <alignmentX value="0.0"/>
+              <alignmentY value="0.0"/>
+              <autoscrolls value="true"/>
+              <editable value="false"/>
+              <enabled value="true"/>
+              <maximumSize width="-1" height="-1"/>
+              <minimumSize width="-1" height="30"/>
+              <opaque value="false"/>
+              <preferredSize width="-1" height="30"/>
+              <requestFocusEnabled value="true"/>
+              <verifyInputWhenFocusTarget value="true"/>
+            </properties>
+          </component>
+          <component id="c9ba5" class="javax.swing.JTextField" binding="daoNameTextField">
+            <constraints>
+              <grid row="9" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <alignmentX value="0.0"/>
+              <alignmentY value="0.0"/>
+              <autoscrolls value="true"/>
+              <editable value="false"/>
+              <maximumSize width="-1" height="-1"/>
+              <minimumSize width="-1" height="30"/>
+              <opaque value="false"/>
+              <preferredSize width="150" height="30"/>
+              <requestFocusEnabled value="true"/>
+              <verifyInputWhenFocusTarget value="true"/>
+            </properties>
+          </component>
+          <component id="2ae1c" class="javax.swing.JTextField" binding="daoPathTextField">
+            <constraints>
+              <grid row="9" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <gridbag top="0" left="0" bottom="0" right="20" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <alignmentX value="0.0"/>
+              <alignmentY value="0.0"/>
+              <autoscrolls value="true"/>
+              <editable value="false"/>
+              <enabled value="true"/>
+              <maximumSize width="-1" height="-1"/>
+              <minimumSize width="-1" height="30"/>
+              <opaque value="false"/>
+              <preferredSize width="-1" height="30"/>
+              <requestFocusEnabled value="true"/>
+              <verifyInputWhenFocusTarget value="true"/>
+            </properties>
+          </component>
+          <component id="ca59a" class="javax.swing.JTextField" binding="daoImplNameTextField">
+            <constraints>
+              <grid row="10" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <alignmentX value="0.0"/>
+              <alignmentY value="0.0"/>
+              <autoscrolls value="true"/>
+              <editable value="false"/>
+              <maximumSize width="-1" height="-1"/>
+              <minimumSize width="-1" height="30"/>
+              <opaque value="false"/>
+              <preferredSize width="150" height="30"/>
+              <requestFocusEnabled value="true"/>
+              <verifyInputWhenFocusTarget value="true"/>
+            </properties>
+          </component>
+          <component id="b2ca2" class="javax.swing.JTextField" binding="daoImplPathTextField">
+            <constraints>
+              <grid row="10" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <gridbag top="0" left="0" bottom="0" right="20" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <alignmentX value="0.0"/>
+              <alignmentY value="0.0"/>
+              <autoscrolls value="true"/>
+              <editable value="false"/>
+              <enabled value="true"/>
+              <maximumSize width="-1" height="-1"/>
+              <minimumSize width="-1" height="30"/>
+              <opaque value="false"/>
+              <preferredSize width="-1" height="30"/>
+              <requestFocusEnabled value="true"/>
+              <verifyInputWhenFocusTarget value="true"/>
+            </properties>
+          </component>
+          <component id="a55ce" class="javax.swing.JTextField" binding="mapperPackageSuffixTextField">
+            <constraints>
+              <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <alignmentX value="0.5"/>
+              <inheritsPopupMenu value="false"/>
+              <maximumSize width="-1" height="-1"/>
+              <minimumSize width="150" height="30"/>
+              <preferredSize width="150" height="30"/>
+            </properties>
+          </component>
+          <component id="ca422" class="javax.swing.JTextField" binding="daoPackageSuffixTextField">
+            <constraints>
+              <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <alignmentX value="0.5"/>
+              <inheritsPopupMenu value="false"/>
+              <maximumSize width="-1" height="-1"/>
+              <minimumSize width="150" height="30"/>
+              <preferredSize width="150" height="30"/>
+            </properties>
+          </component>
+          <component id="422d2" class="javax.swing.JTextField" binding="mapperNameSuffixTextField" default-binding="true">
+            <constraints>
+              <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="2" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="1.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <alignmentX value="1.0"/>
+              <alignmentY value="1.0"/>
+              <inheritsPopupMenu value="false"/>
+              <maximumSize width="-1" height="-1"/>
+              <minimumSize width="200" height="30"/>
+              <preferredSize width="200" height="30"/>
+            </properties>
+          </component>
+          <component id="d9553" class="javax.swing.JTextField" binding="daoNameSuffixTextField" default-binding="true">
+            <constraints>
+              <grid row="4" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="2" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="1.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <alignmentX value="1.0"/>
+              <alignmentY value="1.0"/>
+              <inheritsPopupMenu value="false"/>
+              <maximumSize width="-1" height="-1"/>
+              <minimumSize width="200" height="30"/>
+              <preferredSize width="200" height="30"/>
+            </properties>
+          </component>
+          <component id="52ab5" class="javax.swing.JTextField" binding="daoImplPackageSuffixTextField">
+            <constraints>
+              <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <alignmentX value="0.5"/>
+              <inheritsPopupMenu value="false"/>
+              <maximumSize width="-1" height="-1"/>
+              <minimumSize width="150" height="30"/>
+              <preferredSize width="150" height="30"/>
+            </properties>
+          </component>
+          <component id="8d7cb" class="javax.swing.JTextField" binding="entityNameSuffixTextField" default-binding="true">
+            <constraints>
+              <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="2" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="1.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <alignmentX value="1.0"/>
+              <alignmentY value="1.0"/>
+              <editable value="false"/>
+              <enabled value="true"/>
+              <inheritsPopupMenu value="false"/>
+              <maximumSize width="-1" height="-1"/>
+              <minimumSize width="200" height="30"/>
+              <preferredSize width="200" height="30"/>
+            </properties>
+          </component>
+          <component id="f5d3e" class="javax.swing.JTextField" binding="entityPackageSuffixTextField">
+            <constraints>
+              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <alignmentX value="0.5"/>
+              <inheritsPopupMenu value="false"/>
+              <maximumSize width="-1" height="-1"/>
+              <minimumSize width="150" height="30"/>
+              <preferredSize width="150" height="30"/>
+            </properties>
+          </component>
+          <component id="4a2d7" class="javax.swing.JTextField" binding="daoImplNameSuffixTextField" default-binding="true">
+            <constraints>
+              <grid row="5" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="2" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="1.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <alignmentX value="1.0"/>
+              <alignmentY value="1.0"/>
+              <inheritsPopupMenu value="false"/>
+              <maximumSize width="-1" height="-1"/>
+              <minimumSize width="200" height="30"/>
+              <preferredSize width="200" height="30"/>
+            </properties>
+          </component>
+          <component id="d5f43" class="javax.swing.JTextField" binding="basePathTextField">
+            <constraints>
+              <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="8" fill="2" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="1.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <alignmentX value="1.0"/>
+              <alignmentY value="1.0"/>
+              <editable value="true"/>
+              <enabled value="true"/>
+              <inheritsPopupMenu value="false"/>
+              <maximumSize width="-1" height="-1"/>
+              <minimumSize width="200" height="30"/>
+              <preferredSize width="200" height="30"/>
+            </properties>
+          </component>
+          <component id="30b2" class="javax.swing.JTextField" binding="projectPathTextField">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="3" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <gridbag top="0" left="0" bottom="0" right="20" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <alignmentX value="0.5"/>
+              <inheritsPopupMenu value="false"/>
+              <maximumSize width="-1" height="-1"/>
+              <minimumSize width="300" height="30"/>
+              <preferredSize width="500" height="30"/>
+            </properties>
+          </component>
+          <component id="14a12" class="javax.swing.JTextField" binding="basePackageTextField">
+            <constraints>
+              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <alignmentX value="0.5"/>
+              <inheritsPopupMenu value="false"/>
+              <maximumSize width="-1" height="-1"/>
+              <minimumSize width="150" height="30"/>
+              <preferredSize width="150" height="30"/>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="5cfa0" class="javax.swing.JSeparator">
+            <constraints>
+              <grid row="6" column="0" row-span="1" col-span="4" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <gridbag top="10" left="0" bottom="10" right="20" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties/>
+          </component>
+          <component id="bb775" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag top="0" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <text value="project path"/>
+            </properties>
+          </component>
+          <component id="c6cd7" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag top="0" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <text value="base package"/>
+            </properties>
+          </component>
+          <component id="abdb5" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag top="0" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <text value="entity pkg suffix"/>
+            </properties>
+          </component>
+          <component id="9f3ea" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag top="0" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <text value="mapper pkg suffix"/>
+            </properties>
+          </component>
+          <component id="72dc5" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag top="0" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <text value="dao pkg suffix"/>
+            </properties>
+          </component>
+          <component id="1bce1" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag top="0" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <text value="daoImpl pkg suffix"/>
+            </properties>
+          </component>
+          <component id="1d24d" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag top="0" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <text value="mvn path"/>
+            </properties>
+          </component>
+          <component id="34bd4" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag top="0" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <text value="entity name suffix"/>
+            </properties>
+          </component>
+          <component id="c13e7" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag top="0" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <text value="mapper name suffix"/>
+            </properties>
+          </component>
+          <component id="32228" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag top="0" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <text value="dao name suffix"/>
+            </properties>
+          </component>
+          <component id="5f850" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag top="0" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <text value="daoImpl name suffix"/>
+            </properties>
+          </component>
+          <component id="dfe40" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag top="0" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <text value="entity name"/>
+            </properties>
+          </component>
+          <component id="bd639" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag top="0" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <text value="mapper name"/>
+            </properties>
+          </component>
+          <component id="483c1" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="9" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag top="0" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <text value="dao name"/>
+            </properties>
+          </component>
+          <component id="f27c2" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="10" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag top="0" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <text value="dao impl name"/>
+            </properties>
+          </component>
+          <component id="6446f" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="7" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag top="0" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <text value="entity path"/>
+            </properties>
+          </component>
+          <component id="bb5fe" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="8" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag top="0" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <text value="mapper path"/>
+            </properties>
+          </component>
+          <component id="33572" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="9" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag top="0" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <text value="dao path"/>
+            </properties>
+          </component>
+          <component id="584a0" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="10" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag top="0" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <text value="dao impl path"/>
+            </properties>
+          </component>
+          <component id="a2e7d" class="javax.swing.JSeparator">
+            <constraints>
+              <grid row="11" column="0" row-span="1" col-span="4" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <gridbag top="10" left="0" bottom="10" right="20" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <toolTipText value=""/>
+            </properties>
+          </component>
+          <component id="ae3d2" class="javax.swing.JTextField" binding="servicePathTextField">
+            <constraints>
+              <grid row="12" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <gridbag top="0" left="0" bottom="0" right="20" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <alignmentX value="0.0"/>
+              <alignmentY value="0.0"/>
+              <autoscrolls value="true"/>
+              <editable value="false"/>
+              <enabled value="true"/>
+              <maximumSize width="-1" height="-1"/>
+              <minimumSize width="-1" height="30"/>
+              <opaque value="false"/>
+              <preferredSize width="-1" height="30"/>
+              <requestFocusEnabled value="true"/>
+              <verifyInputWhenFocusTarget value="true"/>
+            </properties>
+          </component>
+          <component id="940e0" class="javax.swing.JTextField" binding="serviceNameTextField">
+            <constraints>
+              <grid row="12" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <alignmentX value="0.0"/>
+              <alignmentY value="0.0"/>
+              <autoscrolls value="true"/>
+              <editable value="false"/>
+              <enabled value="true"/>
+              <focusable value="true"/>
+              <margin top="2" left="6" bottom="2" right="6"/>
+              <maximumSize width="-1" height="-1"/>
+              <minimumSize width="150" height="30"/>
+              <opaque value="true"/>
+              <preferredSize width="200" height="30"/>
+              <requestFocusEnabled value="true"/>
+              <text value=""/>
+              <verifyInputWhenFocusTarget value="true"/>
+            </properties>
+          </component>
+          <component id="41e38" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="12" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag top="0" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <text value="service name"/>
+            </properties>
+          </component>
+          <component id="415d5" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="12" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag top="0" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <text value="service path"/>
+            </properties>
+          </component>
+          <component id="8593b" class="javax.swing.JSeparator">
+            <constraints>
+              <grid row="14" column="0" row-span="1" col-span="4" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <gridbag top="10" left="0" bottom="10" right="20" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties/>
+          </component>
+          <component id="2a620" class="javax.swing.JTextField" binding="controllerPathTextField">
+            <constraints>
+              <grid row="13" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <gridbag top="0" left="0" bottom="0" right="20" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <alignmentX value="0.0"/>
+              <alignmentY value="0.0"/>
+              <autoscrolls value="true"/>
+              <editable value="false"/>
+              <enabled value="true"/>
+              <maximumSize width="-1" height="-1"/>
+              <minimumSize width="-1" height="30"/>
+              <opaque value="false"/>
+              <preferredSize width="-1" height="30"/>
+              <requestFocusEnabled value="true"/>
+              <verifyInputWhenFocusTarget value="true"/>
+            </properties>
+          </component>
+          <component id="fed33" class="javax.swing.JTextField" binding="controllerNameTextField">
+            <constraints>
+              <grid row="13" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+              <gridbag weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <alignmentX value="0.0"/>
+              <alignmentY value="0.0"/>
+              <autoscrolls value="true"/>
+              <editable value="false"/>
+              <enabled value="true"/>
+              <focusable value="true"/>
+              <margin top="2" left="6" bottom="2" right="6"/>
+              <maximumSize width="-1" height="-1"/>
+              <minimumSize width="150" height="30"/>
+              <opaque value="true"/>
+              <preferredSize width="200" height="30"/>
+              <requestFocusEnabled value="true"/>
+              <text value=""/>
+              <verifyInputWhenFocusTarget value="true"/>
+            </properties>
+          </component>
+          <component id="f0630" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="13" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag top="0" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <text value="controller name"/>
+            </properties>
+          </component>
+          <component id="43387" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="13" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+              <gridbag top="0" left="0" bottom="0" right="5" weightx="0.0" weighty="0.0"/>
+            </constraints>
+            <properties>
+              <text value="controller path"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="e4c84" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="true" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints border-constraint="West"/>
+        <properties>
+          <alignmentX value="0.2"/>
+          <alignmentY value="0.5"/>
+          <autoscrolls value="true"/>
+          <enabled value="true"/>
+          <minimumSize width="220" height="-1"/>
+          <preferredSize width="220" height="-1"/>
+        </properties>
+        <border type="none" title-justification="2"/>
+        <children>
+          <scrollpane id="5d6cd">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <preferred-size width="-1" height="200"/>
+              </grid>
+            </constraints>
+            <properties>
+              <alignmentY value="0.5"/>
+            </properties>
+            <border type="none" title="table list"/>
+            <children>
+              <component id="e2d9e" class="javax.swing.JList" binding="tableList">
+                <constraints/>
+                <properties/>
+              </component>
+            </children>
+          </scrollpane>
+          <scrollpane id="680e2">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <alignmentY value="0.7"/>
+              <verticalScrollBarPolicy value="20"/>
+            </properties>
+            <border type="none" title="generate result"/>
+            <children>
+              <component id="c3363" class="javax.swing.JList" binding="resultList">
+                <constraints/>
+                <properties/>
+              </component>
+            </children>
+          </scrollpane>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>

@@ -1,0 +1,81 @@
+## 引入宏定义
+#parse("common.vm")
+
+package ${controllerPackage};
+
+import cn.dxy.bbs.ms.model.PageBean;
+import cn.dxy.bbs.ms.model.PageParam;
+import ${servicePackage}.${serviceName};
+import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
+
+#classComment("xxx相关接口")
+@Slf4j
+@RestController
+@AllArgsConstructor
+public class ${controllerName} {
+
+    private final ${serviceName} service;
+
+    /**
+     * xxx - 分页查询
+     */
+    @GetMapping("/xxx/xxx/page")
+    public PageBean<?> page(PageParam pageParam) {
+        // TODO 分页查询
+        return service.page(pageParam);
+    }
+
+    /**
+     * xxx - list查询
+     */
+    @GetMapping("/xxx/xxx/list")
+    public List<?> list(Object param) {
+        // TODO 多记录查询
+        return service.list(param);
+    }
+
+    /**
+     * xxx - 详细信息
+     */
+    @GetMapping("/xxx/xxx/detail")
+    public Object detail(Integer id) {
+        // TODO 明细
+        return service.detail(id);
+    }
+
+    /**
+     * xxx - 新增
+     */
+    @PostMapping("/xxx/xxx/insert")
+    public void insert(@Validated @RequestBody Object param) {
+        // TODO 新增
+        service.insert(param);
+    }
+
+    /**
+     * xxx - 更新
+     */
+    @PostMapping("/xxx/xxx/update")
+    public void update(@Validated @RequestBody Object param) {
+        // TODO 更新
+        service.update(param);
+    }
+
+    /**
+     * xxx - 删除
+     */
+    @PostMapping("/xxx/xxx/delete")
+    public void delete(@RequestParam Integer id) {
+        // TODO 删除
+        service.delete(id);
+    }
+}

@@ -1,0 +1,30 @@
+## 引入宏定义
+#parse("common.vm")
+
+package ${daoImplPackage};
+
+import ${entityPackage}.${entityName};
+import ${baseMapperPackage}.${baseMapperName};
+import ${mapperPackage}.${mapperName};
+import ${daoPackage}.${daoName};
+import ${baseDaoImplPackage}.${baseDaoImplName};
+
+import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
+
+## 使用宏定义实现类注释信息
+#classComment("")
+@Slf4j
+@Service
+@AllArgsConstructor
+public class ${daoImplName} extends ${baseDaoImplName}<${entityName}> implements ${daoName} {
+
+    private final ${mapperName} mapper;
+
+    @Override
+    protected ${baseMapperName}<${entityName}> mapper() {
+        return mapper;
+    }
+
+}

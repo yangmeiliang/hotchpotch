@@ -1,0 +1,52 @@
+## 引入宏定义
+#parse("common.vm")
+
+package ${servicePackage};
+
+import ${daoPackage}.${daoName};
+import ${entityPackage}.${entityName};
+import cn.dxy.bbs.ms.model.PageBean;
+import cn.dxy.bbs.ms.model.PageParam;
+import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
+
+import java.util.Collections;
+import java.util.List;
+
+#classComment("")
+@Slf4j
+@Service
+@AllArgsConstructor
+public class ${serviceName} {
+
+    private final ${daoName} dao;
+
+    public PageBean<?> page(PageParam pageParam) {
+        // TODO 分页查询
+        return PageBean.emptyPage(pageParam);
+    }
+
+    public List<?> list(Object param) {
+        // TODO 多记录查询
+        return Collections.emptyList();
+    }
+
+    public Object detail(Integer id) {
+        // TODO 明细
+        return dao.selectByPrimaryKey(id);
+    }
+
+    public void insert(Object param) {
+        // TODO 新增
+    }
+
+    public void update(Object param) {
+        // TODO 更新
+    }
+
+    public void delete(Integer id) {
+        // TODO 删除
+    }
+
+}

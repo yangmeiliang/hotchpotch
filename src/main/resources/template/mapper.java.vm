@@ -1,0 +1,11 @@
+#parse("common.vm")
+
+package $!{mapperPackage};
+
+import $!{baseMapperPackage}.${baseMapperName};
+import $!{entityPackage}.$!{entityName};
+
+#classComment("数据库表 <$!{tableName}> mapper层")
+public interface $!{mapperName} extends ${baseMapperName}<$!{entityName}> {
+
+}

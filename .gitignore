@@ -1,0 +1,14 @@
+/target
+/gen
+/build
+/idea-sandbox
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### gradle ###
+.gradle
+

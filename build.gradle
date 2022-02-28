@@ -1,0 +1,70 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.intellij' version '0.6.5'
+}
+
+group 'org.yml.plugin'
+version '1.3-SNAPSHOT'
+
+repositories {
+    mavenLocal()
+    maven { url "https://maven.aliyun.com/repository/public" }
+    mavenCentral()
+    gradlePluginPortal()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+
+    compileOnly 'org.projectlombok:lombok:1.18.22'
+    annotationProcessor 'org.projectlombok:lombok:1.18.22'
+    compile('com.alibaba:fastjson:1.2.79')
+}
+
+buildSearchableOptions.enabled = false
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+// See https://github.com/JetBrains/gradle-intellij-plugin/
+intellij {
+    type = "IU"
+    // 2020.3以后需要jdk11才能打开
+    version = '2020.2'
+    pluginName = "Hotchpotch"
+    plugins = ['com.intellij.java', 'Velocity']
+    // 沙箱目录位置，用于保存IDEA的设置，默认在build文件下面，防止clean，放在根目录下。
+    sandboxDirectory = "${rootProject.rootDir}/idea-sandbox/${version}"
+    updateSinceUntilBuild = false
+}
+
+patchPluginXml {
+    changeNotes """
+      version 1.3: <br>
+        1.CodeGenerateFromCreateSql - 模板优化、新增service、controller、serviceTest模板 <br>
+      version 1.2: <br>
+        1.UploadToApiMocker - 自动识别@RequestParam是否必填 <br>
+        2.UploadToApiMocker - 在controller层识别@param参数备注 <br>
+        3.UploadToApiMocker - 字段备注支持多行 <br>
+        4.TrialReset - 新增自动重置试用期功能 <br>
+        5.CodeGenerateFromCreateSql - GenerateEntityAndDaoAction名称变更 <br>
+        6.UploadToApiMocker - 兼容gradle项目
+        7.UploadToApiMocker - 新增mock示例数据解析
+        8.UploadToApiMocker - 新增配置界面，位置：Hotchpotch -> ApiMocker Setting
+      version 1.1: <br>
+        1.UploadToApiMocker - 支持自动上传接口文档后跳转链接 <br>
+        2.GenerateEntityAndDaoAction - 新增根据建表语句自动生成entity、mapper、dao、service代码功能 <br>
+      version 1.0: <br>
+        1.GenerateO2O - 对象字段映射转换功能
+        2.ConvertToJson - 对象转换成json
+        3.UploadToApiMocker - 自动解析controller接口上传到api-mocker
+      
+      """
+}
+
+publishPlugin {
+    channels = 'Stable'
+    token = 'perm:eWFuZ21laWxpYW5n.OTItMzIyNg==.OWdDWS3vCTMxNt3jS3xjWIIbnIcBby'
+}
+

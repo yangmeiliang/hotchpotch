@@ -1,0 +1,26 @@
+## 引入宏定义
+#parse("common.vm")
+
+package $entityPackage;
+
+import lombok.Getter;
+import lombok.Setter;
+import lombok.experimental.Accessors;
+
+import javax.persistence.Column;
+import javax.persistence.Id;
+import javax.persistence.Table;
+## 使用宏定义实现默认包导入
+#autoImport($!{tableInfo.importList})
+
+## 使用宏定义实现类注释信息
+#classComment($!{tableComment})
+@Getter
+@Setter
+@Accessors(chain = true)
+@Table(name = "$tableName")
+public class ${entityName} {
+#foreach($column in $tableInfo.columns)
+#entityField($column)##
+#end
+}
