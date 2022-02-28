@@ -2,8 +2,8 @@
 #parse("common.vm")
 package ${servicePackage};
 
-import cn.dxy.bbs.ms.BaseTest;
-import cn.dxy.bbs.ms.model.PageBean;
+import org.example.BaseTest;
+import org.example.model.PageBean;
 import org.junit.Test;
 
 import javax.annotation.Resource;

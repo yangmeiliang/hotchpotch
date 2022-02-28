@@ -41,8 +41,6 @@
  */
 private String username;
 ```
-- [社区项目配置文件汇总](https://wiki.dxy.net/pages/viewpage.action?pageId=199319367)
-
 ### Api Mocker自动上传配置方式 - 项目配置文件
 
 > 在项目resources路径下创建配置文件：api-mocker.properties
@@ -50,7 +48,7 @@ private String username;
 > api-mocker.properties 参数说明：
 - importType: 0-追加导入(接口存在的话不会覆盖或合并) 2-智能合并
 - projectToken: api-mocker对应分组的token值，获取位置：分组的创建者->接口管理->我的分组->编辑
-- uploadUrl: 上传接口 [自动导入api-mocker](https://f2e.dxy.net/mock/#/doc/5feb5de370576303a91c188a/5feb5e68e9ce3003a1c76144)
+- uploadUrl: 上传接口
 - returnClass: 统一返回对象封装
 - userToken: 提交用户token, 获取位置：api-mocker右上角个人信息->导入接口token
 > userToken也可放在idea的项目配置文件中，位置： .idea -> misc.xml

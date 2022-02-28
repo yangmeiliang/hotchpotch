@@ -5,8 +5,8 @@ package ${servicePackage};
 
 import ${daoPackage}.${daoName};
 import ${entityPackage}.${entityName};
-import cn.dxy.bbs.ms.model.PageBean;
-import cn.dxy.bbs.ms.model.PageParam;
+import org.example.model.PageBean;
+import org.example.model.PageParam;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

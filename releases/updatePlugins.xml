@@ -9,7 +9,7 @@
       url - path to download the plugin JAR/ZIP file. Required. Must be HTTPS
       version - version of this plugin. Required. Must match <version> in plugin.xml
     -->
-    <plugin id="org.yml.plugin.hotchpotch" url="https://gitlab.dxy.net/yangmeiliang/hotchpotch/-/blob/master/releases/Hotchpotch-latest.zip" version="major.minor.update">
+    <plugin id="org.yml.plugin.hotchpotch" url="https://github.com/yangmeiliang/hotchpotch/-/blob/master/releases/Hotchpotch-latest.zip" version="major.minor.update">
         <!--
           The <idea-version> element must match the same element in plugin.xml. Required.
         -->
